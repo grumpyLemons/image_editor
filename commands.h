@@ -3,8 +3,8 @@
 namespace Editor {
     class Command {
     public:
-        Command();
-        ~Command();
+        Command() = default;
+        ~Command() = default;
         virtual void execute();
         virtual void revert();
         void addShape(Shape* shape);

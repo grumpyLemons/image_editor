@@ -6,7 +6,7 @@
 
 
 namespace Editor {
-    class Executor final{
+    class Invoker final{
     public:
         void addShape(std::String name, Shape* shape);
         void execute(std::String shapeName, Command* command);
