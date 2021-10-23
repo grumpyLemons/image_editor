@@ -13,7 +13,7 @@ namespace Editor {
 
     class Triangle : public Shape {
     public:
-        void translate() override;
+        void translate(Math::Vector2 vector) override;
         void rotate() override;
         void scale() override;
     private:
@@ -46,6 +46,6 @@ namespace Editor {
         ShapeFactory() = default;
         ~ShapeFactory() = default;
 
-        Shape* create(std::String arguments);
+        Shape* create(std::string arguments);
     };
 }
