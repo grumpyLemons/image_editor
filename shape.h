@@ -20,10 +20,12 @@ namespace Editor {
         Math::Vector2 pointA;
         Math::Vector2 pointB;
         Math::Vector2 pointC;
+
+        void translate();
     };
     class Rectangle : public Shape {
     public:
-        void translate() override;
+        void translate(Math::Vector2 vector) override;
         void rotate() override;
         void scale() override;
     private:
@@ -32,7 +34,7 @@ namespace Editor {
     };
     class Circle : public Shape {
     public:
-        void translate() override;
+        void translate(Math::Vector2 vector) override;
         void rotate() override;
         void scale() override;
     private:

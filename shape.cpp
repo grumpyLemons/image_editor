@@ -12,7 +12,7 @@ void Editor::Shape::scale() {
 
 }
 
-void Editor::Triangle::translate() {
+void Editor::Triangle::translate(Math::Vector2 vector) {
 
 }
 
@@ -24,7 +24,7 @@ void Editor::Triangle::scale() {
     Shape::scale();
 }
 
-void Editor::Rectangle::translate() {
+void Editor::Rectangle::translate(Math::Vector2 vector) {
 
 }
 
@@ -36,7 +36,7 @@ void Editor::Rectangle::scale() {
     Shape::scale();
 }
 
-void Editor::Circle::translate() {
+void Editor::Circle::translate(Math::Vector2 vector) {
 
 }
 
@@ -48,6 +48,6 @@ void Editor::Circle::scale() {
     Shape::scale();
 }
 
-Editor::Shape* Editor::ShapeFactory::create(std::String arguments) {
+Editor::Shape* Editor::ShapeFactory::create(std::string arguments) {
     return nullptr;
 }
