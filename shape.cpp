@@ -4,11 +4,10 @@ void Editor::Shape::translate(Math::Vector2 vector) {
 
 }
 
-void Editor::Shape::rotate() {
-
+void Editor::Shape::rotate(float angle) {
 }
 
-void Editor::Shape::scale() {
+void Editor::Shape::scale(Math::Vector2 vector) {
 
 }
 
@@ -16,36 +15,31 @@ void Editor::Triangle::translate(Math::Vector2 vector) {
 
 }
 
-void Editor::Triangle::rotate() {
-    Shape::rotate();
+void Editor::Triangle::rotate(float angle) {
 }
 
-void Editor::Triangle::scale() {
-    Shape::scale();
+void Editor::Triangle::scale(Math::Vector2 vector) {
 }
 
 void Editor::Rectangle::translate(Math::Vector2 vector) {
 
 }
 
-void Editor::Rectangle::rotate() {
-    Shape::rotate();
+void Editor::Rectangle::rotate(float angle) {
+
 }
 
-void Editor::Rectangle::scale() {
-    Shape::scale();
+void Editor::Rectangle::scale(Math::Vector2 vector) {
 }
 
 void Editor::Circle::translate(Math::Vector2 vector) {
 
 }
 
-void Editor::Circle::rotate() {
-    Shape::rotate();
+void Editor::Circle::rotate(float angle) {
 }
 
-void Editor::Circle::scale() {
-    Shape::scale();
+void Editor::Circle::scale(Math::Vector2 vector) {
 }
 
 Editor::Shape* Editor::ShapeFactory::create(std::string arguments) {
