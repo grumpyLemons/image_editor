@@ -6,9 +6,9 @@ namespace Editor {
     public:
         Shape() = default;
         ~Shape() = default;
-        virtual void translate(Math::Vector2 vector);
-        virtual void rotate(float angle);
-        virtual void scale(Math::Vector2 vector);
+        virtual void translate(Math::Vector2 vector) = 0;
+        virtual void rotate(float angle) = 0;
+        virtual void scale(Math::Vector2 vector) = 0;
     }
 
     class Triangle : public Shape {

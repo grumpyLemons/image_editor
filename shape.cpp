@@ -40,6 +40,7 @@ void Editor::Circle::rotate(float angle) {
 }
 
 void Editor::Circle::scale(Math::Vector2 vector) {
+    pointRadius = vector;
 }
 
 Editor::Shape* Editor::ShapeFactory::create(std::string arguments) {
