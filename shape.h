@@ -13,6 +13,7 @@ namespace Editor {
 
     class Triangle : public Shape {
     public:
+        Triangle(Math::Vector2 A, Math::Vector2 B, Math::Vector2 C) : pointA(A), pointB(B), pointC(C) {}
         void translate(Math::Vector2 vector) override;
         void rotate(float angle) override;
         void scale(Math::Vector2 vector) override;
@@ -25,6 +26,7 @@ namespace Editor {
     };
     class Rectangle : public Shape {
     public:
+        Rectangle(Math::Vector2 A, Math::Vector2 C) : pointA(A), pointC(C) {}
         void translate(Math::Vector2 vector) override;
         void rotate(float angle) override;
         void scale(Math::Vector2 vector) override;
@@ -34,6 +36,7 @@ namespace Editor {
     };
     class Circle : public Shape {
     public:
+        Circle(Math::Vector2 A, Math::Vector2 B) : pointCenter(A), pointRadius(B) {}
         void translate(Math::Vector2 vector) override;
         void rotate(float angle) override;
         void scale(Math::Vector2 vector) override;
