@@ -1,6 +1,9 @@
+#pragma once
+
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <fstream>
 
 #include "commands.h"
 #include "shape.h"
@@ -15,5 +18,13 @@ namespace Editor {
     private:
         std::unordered_map<std::string, Shape*>m_shapes;
         std::vector<Command*> m_commands;
+    };
+
+    class ShapeReader final{
+    public:
+        ShapeReader() = default;
+        std::vector<ShapeTemplate> processInput();
+    private:
+        std::ifstream file;
     };
 }

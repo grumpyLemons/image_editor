@@ -1,3 +1,4 @@
+#pragma once
 #include "math.h"
 #include <string>
 
@@ -43,6 +44,12 @@ namespace Editor {
     private:
         Math::Vector2 pointCenter;
         Math::Vector2 pointRadius;
+    };
+
+    struct ShapeTemplate {
+        ShapeTemplate(std::string name, Shape* shape);
+        std::string name;
+        Shape* shape;
     };
 
 
