@@ -10,7 +10,7 @@ namespace Editor {
         virtual void translate(Math::Vector2 vector) = 0;
         virtual void rotate(float angle) = 0;
         virtual void scale(Math::Vector2 vector) = 0;
-    }
+    };
 
     class Triangle : public Shape {
     public:
@@ -25,6 +25,7 @@ namespace Editor {
 
         void translate();
     };
+
     class Rectangle : public Shape {
     public:
         Rectangle(Math::Vector2 A, Math::Vector2 C) : pointA(A), pointC(C) {}

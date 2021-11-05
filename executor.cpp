@@ -56,4 +56,45 @@ std::vector<Editor::ShapeTemplate> Editor::ShapeReader::processInput() {
         if (shape != nullptr)
             shapes.emplace_back(name, shape);
     }
+    return shapes;
+}
+
+std::vector<Editor::Command> Editor::CommandReader::processInput() {
+    char commandType;
+    char shapeType;
+    std::string name;
+    std::vector<Math::Vector2> points;
+    float angle;
+    std::vector<Command*> commands;
+    file.open("commandsTest.txt");
+    while(file.good()) {
+        points = {};
+        angle = 0;
+        file >> commandType;
+        file >> shapeType;
+        file >> name;
+
+        if (commandType == 'u')
+            break;
+        else if(commandType == 't' || commandType == 's') {
+            int x, y;
+            file >> x;
+            file >> y;
+            points.emplace_back(x, y);
+        }
+        else {
+            file >> angle;
+        }
+
+        Command* command = nullptr;
+        if (commandType == 't')
+            command = new Translate(points.at(0));
+        if (commandType == 's')
+            command = new Scale(points.at(0));
+        if (commandType == 'r')
+            command = new Rotate(angle);
+
+        if (command != nullptr)
+            commands.push_back(command);
+    }
 }

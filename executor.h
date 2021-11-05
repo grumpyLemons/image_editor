@@ -27,4 +27,12 @@ namespace Editor {
     private:
         std::ifstream file;
     };
+
+    class CommandReader final{
+    public:
+        CommandReader() = default;
+        std::vector<Command> processInput();
+    private:
+        std::ifstream file;
+    };
 }
